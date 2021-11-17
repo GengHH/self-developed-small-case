@@ -1,0 +1,110 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-13 17:21:33
+ * @LastEditTime: 2021-11-17 17:39:55
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \LearnCase\WaterFall\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Js瀑布流布局</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body {
+				height: auto;
+			}
+			#main {
+				height: 100%;
+				position: relative;
+				margin: 0 auto;
+				-moz-column-count: 3;
+				column-count: 3;
+			}
+
+			.box {
+				padding: 15px 0 0 15px;
+				float: left;
+			}
+
+			.pic {
+				padding: 20px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				box-shadow: 0 0 5px #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/300/?image=110" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/310/?image=12" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/250/?image=13" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/366/?image=14" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/140/?image=5" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/210/?image=117" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/450/?image=112" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/106/?image=115" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/96/?image=101" alt="" />
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="pic">
+					<img src="https://picsum.photos/200/360/?image=19" alt="" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
