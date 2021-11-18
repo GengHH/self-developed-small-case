@@ -1,0 +1,104 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-18 16:28:35
+ * @LastEditTime: 2021-11-18 18:08:00
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \LearnCase\Swiping\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>swiping</title>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"
+		/>
+		<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.swiper-container {
+				width: 100vw;
+				height: 100vh;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container" id="swiperContainer">
+			<div class="swiper-wrapper">
+				<!-------------slide1----------------->
+				<section class="swiper-slide" style="background: pink">1</section>
+				<!---------------slide2-------------->
+				<section class="swiper-slide" style="background: yellow">
+					<div
+						class="title"
+						data-swiper-parallax-x="-100"
+						data-swiper-parallax-duration="300"
+					>
+						从右边100px开始进入
+					</div>
+					<div
+						class="subtitle"
+						data-swiper-parallax-x="-200"
+						data-swiper-parallax-duration="600"
+					>
+						从右边200px开始进入
+					</div>
+					<div
+						class="text"
+						data-swiper-parallax="-300"
+						data-swiper-parallax-duration="600"
+					>
+						<p>从右边300px开始进入，时间600ms</p>
+					</div>
+					<div data-swiper-parallax="0" data-swiper-parallax-opacity="0.5">
+						透明度变化
+					</div>
+					<div
+						data-swiper-parallax-scale="0.15"
+						data-swiper-parallax-duration="600"
+						style="width: 100px; height: 100px; background-color: #fff"
+					>
+						缩放变化
+					</div>
+				</section>
+				<!----------------slide3-------------->
+				<section class="swiper-slide" style="background: blue">3</section>
+				<!-------------slide4----------------->
+				<section class="swiper-slide" style="background: black">4</section>
+				<!-------------slide5----------------->
+				<section class="swiper-slide" style="background: red">5</section>
+				<!-------------slide6----------------->
+				<section class="swiper-slide" style="background: green">6</section>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onload = function () {
+			new Swiper(".swiper-container", {
+				direction: "vertical",
+				parallax: true,
+				on: {
+					touchStart: function (swiper, event) {
+						console.log(
+							"%c 🍣 event: ",
+							"font-size:20px;background-color: #F5CE50;color:#fff;",
+							event
+						)
+						console.log(
+							"%c 🥠 swiper: ",
+							"font-size:20px;background-color: #E41A6A;color:#fff;",
+							swiper
+						)
+					},
+				},
+			})
+		}
+	</script>
+</html>
