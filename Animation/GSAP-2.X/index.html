@@ -1,0 +1,36 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-21 17:34:57
+ * @LastEditTime: 2021-11-21 18:12:04
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \LearnCase\Animation\GSAP-2.X\index.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+		<style>
+			#obj {
+				position: relative;
+				left: 200px;
+				top: 20px;
+				width: 50px;
+				height: 50px;
+				background: #6fb936;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="obj"></div>
+	</body>
+	<script>
+		TweenMax.to("#obj", 3, { left: 500 })
+	</script>
+</html>

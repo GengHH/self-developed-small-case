@@ -1,0 +1,97 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-20 13:07:54
+ * @LastEditTime: 2021-11-21 18:47:04
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \LearnCase\Animation\JsAnimation\animeJs\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>this is animation case by anime.js</title>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+			referrerpolicy="no-referrer"
+		></script>
+		<style>
+			.blue {
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+			.green {
+				width: 100px;
+				height: 100px;
+				background-color: green;
+			}
+			.wrap {
+				position: relative;
+				width: 200px;
+				height: 200px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 30px;
+			}
+			.heart {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -25px;
+				margin-left: -25px;
+				width: 50px;
+				height: 50px;
+				background-image: url(https://picsum.photos/200);
+				background-size: 100% 100%;
+				transform: scale(0);
+				opacity: 0;
+				color: aquamarine;
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<div class="blue"></div>
+			<div class="green"></div>
+		</article>
+		<div id="test1">
+			<div class="wrap">
+				<div class="heart">123123123123123123333333333</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var myAnimation = anime({
+			targets: [".blue", ".green"],
+			translateX: "13rem",
+			rotate: 180,
+			borderRadius: 8,
+			duration: 2000,
+			loop: true,
+		})
+
+		var testLine1 = anime.timeline({ autoapply: true, loop: true })
+		testLine1.add({
+			targets: ".heart",
+			scale: {
+				value: [0, 1],
+				duration: 500,
+				delay: 1000,
+				easing: "easeOutQuad",
+			},
+			opacity: {
+				value: 1,
+				duration: 600,
+				delay: 1000,
+			},
+			color: {
+				value: "#f00",
+				duration: 600,
+				delay: 1000,
+			},
+		})
+	</script>
+</html>
